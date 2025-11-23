@@ -3,8 +3,9 @@
 Инструкция по запуску.
 
 git clone https://github.com/BETONHOME/go-qa-api-service   
-cd go-qa-api-service
+cd go-qa-api-service  
 docker compose up --build  
+(Сервер работает на 8000 порту, БД на 5432)
 
 Описание проекта.
 
