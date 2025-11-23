@@ -16,11 +16,10 @@ func InitDB() {
 	var db *gorm.DB
 	var err error
 
-	// Ждем пока БД запустится (10 попыток по 3 секунды)
 	for i := 0; i < 10; i++ {
 		db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 		if err != nil {
-			log.Printf("Попытка подключения %d/10: БД еще не готова...", i+1)
+			log.Printf("БД запускается", i+1)
 			time.Sleep(3 * time.Second)
 			continue
 		}
@@ -28,7 +27,7 @@ func InitDB() {
 	}
 
 	if err != nil {
-		log.Fatal("Не удалось подключиться к БД после 10 попыток:", err)
+		log.Fatal("Не удалось подключиться к БД", err)
 	}
 
 	DB = db
