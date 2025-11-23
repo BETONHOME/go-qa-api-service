@@ -2,9 +2,9 @@
 
 Инструкция по запуску.
 
-git clone https://github.com/BETONHOME/go-qa-api-service
-cd API_T3
-docker-compose up --build
+git clone https://github.com/BETONHOME/go-qa-api-service   
+cd API_T3  
+docker-compose up --build  
 
 Описание проекта.
 
